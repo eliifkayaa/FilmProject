@@ -58,3 +58,14 @@ UI.prototype.displayMessages = function(message,type) {
     UI.prototype.deleteFilmFromUI = function(element) {
         element.parentElement.parentElement.remove()
     }
+
+    UI.prototype.clearAllFilmsFromUI = function() {
+        const filmList = document.getElementById("films")
+        
+        // filmList.innerHTML = ""
+
+        while(filmList.firstElementChild !== null) { //child olduğu sürece
+            filmList.firstElementChild.remove();
+        }
+    
+    }
